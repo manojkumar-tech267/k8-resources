@@ -1,0 +1,10 @@
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: config-map 
+data:
+  project: roboshop 
+  environment: dev
+  purpose: :running config map concept"
+  author: "Manoj Kumar"
+  profession: "Working as a DevSecOps Engineer"

@@ -1,0 +1,32 @@
+apiVersion: apps/v1 
+kind: ReplicaSet 
+metadata:
+  name: nginx
+  # we attach this labels to replica set resource
+  labels:
+    project: roboshop 
+    purpose: rs-demo 
+    tier: frontend 
+    component: frontend
+spec: 
+  replicas: 3 
+  selector:
+    # using this labels replica set selects the pod
+    matchLabels:
+      project: roboshop 
+      purpose: rs-demo
+      tier: frontend
+      component: frontend
+  # pod defnition
+  template:
+    metadata:
+      labels:
+        project: roboshop 
+        purpose: rs-demo 
+        tier: frontend 
+        component: frontend
+    spec:
+      containers:
+      - name: nginx 
+        image: nginx:latest
+  

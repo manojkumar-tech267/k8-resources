@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: env-variables
+spec:
+  containers:
+  - name: nginx 
+    image: nginx:latest
+    env:
+    - name: project 
+      value: "roboshop"
+    - name: course 
+      value: "kubernetes"
+    - name: author 
+      value: "manoj"
