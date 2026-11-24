@@ -5,7 +5,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    component: cart
+    component: catalogue
     project: roboshop
     environment: dev
   ports:
